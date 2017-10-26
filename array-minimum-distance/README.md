@@ -21,12 +21,12 @@ Examples
 > * Input: arr[] = {2, 5, 3, 5, 4, 4, 2, 3}, x = 3, y = 2
 > * Output: Minimum distance between 3 and 2 is 1.
 
-**METHOD 1 (Simple)**
+METHOD 1 (Simple)
+--------------------------
 
 Use two loops: The outer loop picks all the elements of arr[] one by one. The inner loop picks all the elements after the element picked by outer loop. If the elements picked by outer and inner loops have same values as x or y then if needed update the minimum distance calculated so far.
 
-Algorithm Complexity
---------------------------
+**Algorithm Complexity**
 
 | Complexity	    | Notation  |
 | ----------------- |:---------:|
