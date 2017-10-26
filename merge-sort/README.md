@@ -4,7 +4,7 @@
 
 ## What It Is
 
-Like **[QuickSort](https://github.com/Dentrax/Data-Structures-with-Go/tree/master/quick-sort)**, Merge Sort is a Divide and Conquer algorithm. It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. The `merge()` function is used for merging two halves. The `merge(arr, l, m, r)` is key process that assumes that `arr[l..m]` and `arr[m+1..r]` are sorted and merges the two sorted sub-arrays into one. See following C implementation for details
+Like **[QuickSort](https://github.com/Dentrax/Data-Structures-with-Go/tree/master/quick-sort)**, `MergeSort` is a Divide and Conquer algorithm. It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. The `merge()` function is used for merging two halves. The `merge(arr, l, m, r)` is key process that assumes that `arr[l..m]` and `arr[m+1..r]` are sorted and merges the two sorted sub-arrays into one. See following C implementation for details
 
 ![Preview Thumbnail](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
 
