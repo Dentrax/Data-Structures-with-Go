@@ -56,25 +56,25 @@ func Push(head_ref **Node, new_data int) {
 	*head_ref = new_node
 }
 
-func DeleteNode(head_ref **Node, key int) {
+func DeleteNodeWithData(head_ref **Node, delete_data int) {
 	//Store head node
 	temp := *head_ref
 	prev := *head_ref
 
-	//If head node itself holds the key to be deleted
-	if(temp != nil && temp.data == key){
+	//If head node itself holds the delete_data to be deleted
+	if(temp != nil && temp.data == delete_data){
 		*head_ref = temp.next;
 		temp = nil
 		return
 	}
 
-	//Search for the key to be deleted, keep track of the previous node as we need to change prev->next
-	for(temp != nil && temp.data != key){
+	//Search for the delete_data to be deleted, keep track of the previous node as we need to change prev->next
+	for(temp != nil && temp.data != delete_data){
 		prev = temp
 		temp = temp.next
 	}
 
-	// If key was not present in linked list
+	// If delete_data was not present in linked list
 	if(temp == nil){
 		return
 	}
@@ -83,6 +83,45 @@ func DeleteNode(head_ref **Node, key int) {
 	prev.next = temp.next
 
 	temp = nil
+}
+
+func DeleteNodeWithPosition(head_ref **Node, delete_position int){
+	//If LinkedList is empty
+	if(*head_ref == nil){
+		return
+	}
+
+	//Store head node
+	temp := *head_ref
+
+	//If head needs to be removed
+	if(delete_position == 0){
+		*head_ref = temp.next
+		temp = nil
+		return
+	}
+
+	//Find previous node of the node to be deleted
+	for i := 0; temp != nil && i < delete_position - 1; i++ {
+		temp = temp.next
+	}
+
+	//If position is more than number of nodes
+	if(temp == nil || temp.next == nil){
+		return
+	}
+
+	//Node temp->next is the node to be deleted, Store pointer to the next of node to be deleted
+	next := temp.next.next
+
+	//Unlink the node from linked list
+	temp.next = nil
+
+	//Unlink the deleted node from list
+	temp.next = next
+
+	
+
 }
 
 //This function prints contents of linked list starting from the given node
@@ -106,11 +145,15 @@ func main() {
 
 	Push(&head, 2)
 
+	Push(&head, 8)
+
 	fmt.Println("Created LinkedList is: ")
 
 	printList(head)
 
-	DeleteNode(&head, 1)
+	DeleteNodeWithData(&head, 1)
+
+	DeleteNodeWithPosition(&head, 4)
 
 	fmt.Println("LinkedList after Deletion of 1: ")
 
