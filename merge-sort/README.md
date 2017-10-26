@@ -11,15 +11,15 @@ Like **[QuickSort](https://github.com/Dentrax/Data-Structures-with-Go/tree/mast
 MergeSort(arr[], l,  r)
 --------------------------
 
-If r > l
-     * 1. Find the middle point to divide the array into two halves:  
-             middle m = (l+r)/2
-     * 2. Call mergeSort for first half:   
-             Call mergeSort(arr, l, m)
-     * 3. Call mergeSort for second half:
-             Call mergeSort(arr, m+1, r)
-     * 4. Merge the two halves sorted in step 2 and 3:
-             Call merge(arr, l, m, r)
+* If r > l
+* 1. Find the middle point to divide the array into two halves:  
+        middle m = (l+r)/2
+* 2. Call mergeSort for first half:   
+        Call mergeSort(arr, l, m)
+* 3. Call mergeSort for second half:
+        Call mergeSort(arr, m+1, r)
+* 4. Merge the two halves sorted in step 2 and 3:
+        Call merge(arr, l, m, r)
 
 
 The following diagram from **[Wikipedia](https://en.wikipedia.org/wiki/File:Merge_sort_algorithm_diagram.svg)** shows the complete merge sort process for an example array {38, 27, 43, 3, 9, 82, 10}. If we take a closer look at the diagram, we can see that the array is recursively divided in two halves till the size becomes 1. Once the size becomes 1, the merge processes comes into action and starts merging arrays back till the complete array is merged
@@ -29,10 +29,6 @@ The following diagram from **[Wikipedia](https://en.wikipedia.org/wiki/File:Mer
 > * Input: {12, 11, 13, 5, 6, 7}
 > * Output: Given array is `12 11 13 5 6 7`
 > * Output: Sorted array is `5 6 7 11 12 13`
-
-> * Input: Rotation of the above array by `2` will make array
-> * Output: `3 4 5 6 7 1 2`
-
 
 **Algorithm Complexity**
 
