@@ -1,16 +1,14 @@
-<h1 align="center">Array Rotation Source </h1>
+<h1 align="center">Array Rotation Source</h1>
 
 [What It Is](#what-it-is)
 
 ## What It Is
 
-* Write a function `rotate(ar[], d, n)` that rotates `arr[]` of size `n` by `d` elements
+> * Input: Write a function `rotate(ar[], d, n)` that rotates `arr[]` of size `n` by `d` elements
+> * Output: `1 2 3 4 5 6 7`
 
-> `1 2 3 4 5 6 7`
-
-* Rotation of the above array by `2` will make array
-
-> `3 4 5 6 7 1 2`
+> * Input: Rotation of the above array by `2` will make array
+> * Output: `3 4 5 6 7 1 2`
 
 **METHOD 1 (Use temp array)**
 
