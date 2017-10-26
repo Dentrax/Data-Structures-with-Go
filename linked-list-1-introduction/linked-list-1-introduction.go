@@ -48,7 +48,6 @@ func printList(n *Node){
 }
 
 func main() {
-
 	//To allocate dynamically a new Node in C language : head = (struct Node*) malloc(sizeof(struct Node));
 	head := New()
 	second := New()

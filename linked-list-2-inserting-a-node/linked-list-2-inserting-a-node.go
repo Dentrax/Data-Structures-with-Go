@@ -113,7 +113,6 @@ func printList(n *Node){
 }
 
 func main() {
-
 	//Start with the empty list
 	head := New()
 	

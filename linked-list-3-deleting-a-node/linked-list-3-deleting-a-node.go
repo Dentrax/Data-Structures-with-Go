@@ -119,9 +119,6 @@ func DeleteNodeWithPosition(head_ref **Node, delete_position int){
 
 	//Unlink the deleted node from list
 	temp.next = next
-
-	
-
 }
 
 //This function prints contents of linked list starting from the given node
@@ -133,7 +130,6 @@ func printList(n *Node){
 }
 
 func main() {
-
 	//Start with the empty list
 	head := New()
 	
