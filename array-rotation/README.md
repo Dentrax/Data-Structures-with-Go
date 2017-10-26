@@ -2,8 +2,6 @@
 
 [What It Is](#what-it-is)
 
-[How To Use](#how-to-use)
-
 ## What It Is
 
 * Write a function `rotate(ar[], d, n)` that rotates `arr[]` of size `n` by `d` elements
@@ -56,7 +54,3 @@ Algorithm Complexity
 | ----------------- |:---------:|
 | `Time Complexity`	| `O(n*d)`  |
 | `Auxiliary Space` | `O(1)`    |
-
-
-## How To Use
-
