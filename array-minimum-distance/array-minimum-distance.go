@@ -29,11 +29,9 @@ func minDist (arr []int, n, x, y int) int {
 
 	for i := 0; i < n; i++ {
 		for j := i + 1; j < n; j++ {
-
-			if ((x == arr[i] && y == arr[j] || y == arr[i] && x == arr[j]) && min_dist > Abs(i - j)) {
+			if((x == arr[i] && y == arr[j] || y == arr[i] && x == arr[j]) && min_dist > Abs(i - j)) {
 				min_dist = Abs(i - j)
 			}
-			
 		}
 	}
 
