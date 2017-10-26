@@ -25,6 +25,20 @@ func New() *Node {
 	return new(Node).Init()
 }
 
+//Returns the first node in list
+func (n *Node) Next() *Node {
+	return n.next
+}
+  
+//Returns the last node in list if exist, otherwise returns current
+func (n *Node) Back() *Node {
+	current := n.next
+	for current != nil && current.next != nil {
+		current = current.next
+	}
+	return current
+}
+
 func printList(n *Node){
 	for n != nil {
 		fmt.Println(n.data)
