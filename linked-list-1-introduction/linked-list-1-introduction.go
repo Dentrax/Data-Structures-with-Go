@@ -39,6 +39,7 @@ func (n *Node) Back() *Node {
 	return current
 }
 
+//This function prints contents of linked list starting from the given node
 func printList(n *Node){
 	for n != nil {
 		fmt.Println(n.data)
