@@ -1,4 +1,4 @@
-<h1 align="center">LinkedList Inserting a Node Source</h1>
+<h1 align="center">LinkedList | SET 2 (INSERTING A NODE) Source</h1>
 
 [What It Is](#what-it-is)
 
