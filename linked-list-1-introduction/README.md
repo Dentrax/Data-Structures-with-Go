@@ -1,4 +1,4 @@
-<h1 align="center">LinkedList | SET 3 (DELETING A NODE) Source</h1>
+<h1 align="center">LinkedList | SET 1 (INTRODUCTION) Source</h1>
 
 [What It Is](#what-it-is)
 
