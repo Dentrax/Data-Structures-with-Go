@@ -9,7 +9,7 @@ package main
 
 import "fmt"
 
-func Merge(arr []int, l, m, r int){
+func Merge(arr []int, l, m, r int) {
 	var i, j, k int
 	var n1 int = m - l + 1
 	var n2 int = r - m
@@ -20,11 +20,11 @@ func Merge(arr []int, l, m, r int){
 
 	//Copy data to temp arrays L[] and R[]
 	for i = 0; i < n1; i++ {
-		L[i] = arr[l + i]
+		L[i] = arr[l+i]
 	}
 
 	for j = 0; j < n2; j++ {
-		R[j] = arr[m + 1 + j]
+		R[j] = arr[m+1+j]
 	}
 
 	//Merge the temp arrays back into arr[l..r]
@@ -32,11 +32,11 @@ func Merge(arr []int, l, m, r int){
 	j = 0 //Initial index of second subarray
 	k = l //Initial index of merged subarray
 
-	for(i < n1 && j < n2){
-		if(L[i] <= R[j]){
+	for i < n1 && j < n2 {
+		if L[i] <= R[j] {
 			arr[k] = L[i]
 			i++
-		}else{
+		} else {
 			arr[k] = R[j]
 			j++
 		}
@@ -44,35 +44,35 @@ func Merge(arr []int, l, m, r int){
 	}
 
 	//Copy the remaining elements of L[], if there are any
-	for(i < n1){
+	for i < n1 {
 		arr[k] = L[i]
 		i++
 		k++
 	}
 
 	//Copy the remaining elements of R[], if there are any
-	for(j < n2){
+	for j < n2 {
 		arr[k] = R[j]
 		j++
 		k++
 	}
 }
 
-func MergeSort(arr []int, l, r int){
-	if(l < r){
+func MergeSort(arr []int, l, r int) {
+	if l < r {
 		//Same as (l + r) / 2 but avoids overflow for large l and h
-		var m int = l + (r - l) / 2
+		var m int = l + (r-l)/2
 
 		//Sort first and second halves
 		MergeSort(arr, l, m)
-		MergeSort(arr, m + 1, r)
+		MergeSort(arr, m+1, r)
 
 		Merge(arr, l, m, r)
 	}
 }
 
-func PrintArray(A []int, size int){
-	for i:=0; i < size; i++ {
+func PrintArray(A []int, size int) {
+	for i := 0; i < size; i++ {
 		fmt.Printf("%d ", A[i])
 	}
 	fmt.Printf("\n")
@@ -85,7 +85,7 @@ func main() {
 	fmt.Println("Given array size is: ")
 	PrintArray(arr, arr_size)
 
-	MergeSort(arr, 0, arr_size - 1)
+	MergeSort(arr, 0, arr_size-1)
 
 	fmt.Println("Sorted array is: ")
 	PrintArray(arr, arr_size)
