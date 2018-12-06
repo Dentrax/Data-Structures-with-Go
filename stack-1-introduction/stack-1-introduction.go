@@ -49,7 +49,6 @@ func Push(stack *Stack, item int) {
 	}
 	stack.top++
 	stack.array[stack.top] = item
-	fmt.Println("Pushed to stack : %d", item)
 }
 
 func Pop(stack *Stack) int {
@@ -66,9 +65,12 @@ func main() {
 	stack := New(100)
 
 	Push(stack, 10)
+	fmt.Println("Pushed to stack : 10")
 	Push(stack, 20)
+	fmt.Println("Pushed to stack : 20")
 	Push(stack, 30)
+	fmt.Println("Pushed to stack : 30")
 
-	fmt.Println("Popped from stack : %d", Pop(stack))
+	fmt.Printf("Popped from stack : %d", Pop(stack))
 
 }
