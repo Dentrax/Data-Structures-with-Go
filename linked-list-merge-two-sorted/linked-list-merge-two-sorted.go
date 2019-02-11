@@ -29,7 +29,7 @@ func New() *Node {
 func (n *Node) Next() *Node {
 	return n.next
 }
-  
+
 //Returns the last node in list if exist, otherwise returns current
 func (n *Node) Back() *Node {
 	current := n.next
@@ -56,15 +56,15 @@ func Push(head_ref **Node, new_data int) {
 	*head_ref = new_node
 }
 
-//Pull off the front node of the source and put it in dest 
+//Pull off the front node of the source and put it in dest
 /* MoveNode() function takes the node from the front of the
    source, and move it to the front of the dest.
    It is an error to call this with the source list empty.
- 
+
    Before calling MoveNode():
    source == {1, 2, 3}
    dest == {1, 2, 3}
- 
+
    Affter calling MoveNode():
    source == {2, 3}
    dest == {1, 1, 2, 3} */
@@ -83,46 +83,56 @@ func MoveNode(dest_ref **Node, source_ref **Node) {
 }
 
 /* Takes two lists sorted in increasing order, and splices
-	   their nodes together to make one big sorted list which
-	   is returned.  */
+   their nodes together to make one big sorted list which
+   is returned.  */
 func SortedMerge(a *Node, b *Node) *Node {
 	//A dummy first node to hang the result on
 	dummy := New()
 
 	//Tail points to the last result node
 	tail := dummy
-	
+
 	//So tail.next is the place to add new nodes to result
 	dummy.next = nil
 
 	for {
-		if (a == nil){
+		if a == nil {
 			//If either list runs out, use the other list
 			tail.next = b
 			break
-		} else if (b == nil){
+		} else if b == nil {
 			tail.next = a
 			break
 		}
 
-		if (a.data <= b.data){
+		if a.data <= b.data {
 			MoveNode(&(tail.next), &a)
-		} else{
+		} else {
 			MoveNode(&(tail.next), &b)
 		}
 
 		tail = tail.next
 	}
-	
+
 	return dummy.next
 }
 
 //This function prints contents of linked list starting from the given node
-func printList(n *Node){
+func printList(n *Node) {
 	for n != nil {
-		fmt.Println(n.data)
+		fmt.Print(n.data)
+		fmt.Print(" ,")
 		n = n.next
 	}
+}
+
+func GetDataList(n *Node) []int {
+	data := []int{}
+	for n != nil {
+		data = append(data, n.data)
+		n = n.next
+	}
+	return data
 }
 
 func main() {
