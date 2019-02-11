@@ -29,7 +29,6 @@ func New(data int) *Node {
 }
 
 func main() {
-
 	//To allocate dynamically a new Node in C language : root = (struct Node*) malloc(sizeof(struct Node));
 	root := New(1)
 	/*

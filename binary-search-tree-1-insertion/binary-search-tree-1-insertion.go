@@ -32,7 +32,7 @@ func New(data int) *Node {
 func Search(root *Node, key int) *Node {
 	//1. Base Cases: root is null or key is present at root
 	if root == nil || root.data == key {
-		fmt.Println("The given previous node cannot be NULL")
+		//fmt.Println("The given previous node cannot be NULL")
 		return root
 	}
 

@@ -43,14 +43,32 @@ func IsEmpty(stack *Stack) bool {
 	return stack.top == -1
 }
 
-func main() {
+func Push(stack *Stack, item int) {
+	if IsFull(stack) {
+		return
+	}
+	stack.top++
+	stack.array[stack.top] = item
+}
 
+func Pop(stack *Stack) int {
+	if IsEmpty(stack) {
+		return MinInt
+	}
+	temp := stack.array[stack.top]
+	stack.top--
+	return temp
+}
+
+func main() {
 	stack := New(100)
 
-	//Push(stack, 10)
-	//Push(stack, 20)
-	//Push(stack, 30)
+	Push(stack, 10)
+	fmt.Println("Pushed to stack : 10")
+	Push(stack, 20)
+	fmt.Println("Pushed to stack : 20")
+	Push(stack, 30)
+	fmt.Println("Pushed to stack : 30")
 
-	fmt.Println("Popped from stack : %d", Pop(stack))
-
+	fmt.Printf("Popped from stack : %d", Pop(stack))
 }
