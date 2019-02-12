@@ -2,6 +2,8 @@
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![Build status](https://ci.appveyor.com/api/projects/status/jv28205majdbvvj0?svg=true)](https://ci.appveyor.com/project/Dentrax/data-structures-with-go)
+[![Build Status](https://travis-ci.org/Dentrax/Data-Structures-with-Go.svg?branch=master)](https://travis-ci.org/Dentrax/Data-Structures-with-Go)
 
 Click here for **[GO Language](https://golang.org/)**
 
