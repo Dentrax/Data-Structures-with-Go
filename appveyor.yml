@@ -1,0 +1,12 @@
+version: "{build}"
+skip_tags: true
+clone_depth: 1
+
+environment:
+  GOVERSION: 1.11
+
+build: false
+deploy: false
+
+install:
+  - go build -v ./...
